@@ -3,7 +3,7 @@ import { PORTFOLIO_CONFIG } from '../data/portfolioData';
 import { ArrowUpRight } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
-  const photoUrl = '/aashish-portrait.jpg';
+  const photoUrl = './aashish-portrait.jpg';
   const fallbackUrl = 'https://i.ibb.co/0jqN5Z9J/Whats-App-Image-2026-10-06-at-1-18-23-AM.jpg';
 
   return (

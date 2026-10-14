@@ -119,6 +119,15 @@ export const FooterSection: React.FC<FooterProps> = ({
           {/* Social links at the bottom */}
           <div className="flex flex-wrap items-center gap-5 sm:gap-6 font-semibold uppercase tracking-wider">
             <a 
+              href={socials.github} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-white transition-colors"
+            >
+              GITHUB
+            </a>
+            <span aria-hidden="true" className="text-white/20">·</span>
+            <a 
               href={socials.instagram} 
               target="_blank" 
               rel="noopener noreferrer" 

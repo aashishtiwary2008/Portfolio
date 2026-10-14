@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PORTFOLIO_CONFIG } from '../data/portfolioData';
-import { Menu, X, ArrowUpRight, Mail } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Mail, Github } from 'lucide-react';
 
 interface NavbarProps {
   onOpenContact: () => void;
@@ -89,8 +89,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
             ))}
           </div>
 
-          {/* Right: Changed from Hire Me to "LET'S TALK" */}
+          {/* Right: GitHub profile icon + LET'S TALK */}
           <div className="flex items-center gap-2">
+            <a
+              href={PORTFOLIO_CONFIG.socials.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-1.5 sm:p-2 rounded-full border border-black/15 text-black hover:bg-black hover:text-white transition-all flex items-center justify-center"
+              title="GitHub Profile (Source Code & Repositories)"
+              aria-label="GitHub Profile"
+            >
+              <Github className="w-3.5 h-3.5" />
+            </a>
+
             <button
               onClick={onOpenContact}
               type="button"
@@ -160,9 +171,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
             ))}
           </div>
 
-          {/* Bottom Bar: Action CTA + Direct Email + Photo Access */}
+          {/* Bottom Bar: Action CTA + Direct Email + GitHub */}
           <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-            <div className="space-y-2">
+            <div className="flex flex-wrap items-center gap-6">
               <div>
                 <span className="block text-[10px] font-mono uppercase text-neutral-500 mb-1">
                   Direct Contact
@@ -173,6 +184,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
                 >
                   <Mail className="w-3.5 h-3.5" />
                   <span>{PORTFOLIO_CONFIG.personal.email}</span>
+                </a>
+              </div>
+
+              <div>
+                <span className="block text-[10px] font-mono uppercase text-neutral-500 mb-1">
+                  GitHub
+                </span>
+                <a 
+                  href={PORTFOLIO_CONFIG.socials.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs sm:text-sm font-mono text-white hover:underline flex items-center gap-1.5"
+                >
+                  <Github className="w-3.5 h-3.5" />
+                  <span>github.com/aashishtiwary</span>
                 </a>
               </div>
             </div>

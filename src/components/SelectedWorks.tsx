@@ -8,6 +8,7 @@ export interface WorkProject {
   subtitle: string;
   category: string;
   liveUrl: string;
+  githubUrl?: string;
   description: string;
   techStack: string[];
   features: string[];
@@ -22,6 +23,7 @@ export const PROJECTS_DATA: WorkProject[] = [
     subtitle: 'All-in-One Online Utilities & Live APIs Hub',
     category: 'Web Utility & Live APIs',
     liveUrl: 'https://www.mytoolsapi.com/',
+    githubUrl: 'https://github.com/aashishtiwary',
     description: 'A free online tools hub powered by live APIs — weather forecast, currency conversion, real-time crypto and gold prices, a calculator, QR and password generators, IP/DNS lookup, and live news, all in one place.',
     techStack: ['Live APIs', 'JavaScript (ES6+)', 'HTML5 & CSS3', 'REST Integrations', 'DNS/Network Tools', 'Web Standards'],
     features: [
@@ -40,6 +42,7 @@ export const PROJECTS_DATA: WorkProject[] = [
     subtitle: 'Real-Time Crypto, Precious Metals & Currency Tracker',
     category: 'Finance, Crypto & Market Rates',
     liveUrl: 'https://aureusexchange.netlify.app/',
+    githubUrl: 'https://github.com/aashishtiwary',
     description: 'A live market value tracker covering spot gold, silver, and platinum, Bitcoin and Ethereum, and major sovereign currency pairs — laid out as one clean, continuously refreshed financial dashboard.',
     techStack: ['Market Data APIs', 'Real-Time Rates', 'JavaScript', 'CSS Grid & Modern UI', 'Netlify Hosting', 'Financial Data'],
     features: [
