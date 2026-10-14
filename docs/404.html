@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Aashish Tiwari | Developer &amp; Creative Builder</title>
+    <script>
+      // Single Page App redirect for GitHub Pages
+      var pathname = window.location.pathname;
+      var hostname = window.location.hostname;
+      if (hostname.endsWith('github.io')) {
+        // Extract repo name if any: /<repo>/...
+        var parts = pathname.split('/').filter(Boolean);
+        var repo = parts.length > 0 ? parts[0] : '';
+        if (repo && repo !== 'docs') {
+          // If docs folder is part of path
+          if (parts[1] === 'docs') {
+            window.location.replace('/' + repo + '/docs/');
+          } else {
+            window.location.replace('/' + repo + '/');
+          }
+        } else {
+          window.location.replace('/');
+        }
+      } else {
+        window.location.replace('/');
+      }
+    </script>
+  </head>
+  <body style="background:#050505;color:#fff;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
+    <p>Redirecting to portfolio...</p>
+  </body>
+</html>

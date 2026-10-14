@@ -108,7 +108,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
             </a>
 
             <a
-              href="https://github.com/aashishtiwary"
+              href={project.githubUrl || "https://github.com/aashishtiwary"}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-full text-xs font-mono uppercase border border-white/20 text-white hover:bg-white/10 transition-colors"
